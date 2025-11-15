@@ -12,6 +12,9 @@ class MyDocument extends Document {
       <Html lang={lang}>
         <Head>
           <link rel="preconnect" href="https://fonts.cdnfonts.com" />
+          <link rel="icon" type="image/png" href="/images/logo.png" />
+          <link rel="shortcut icon" type="image/png" href="/images/logo.png" />
+          <link rel="apple-touch-icon" href="/images/logo.png" />
         </Head>
         <body className="antialiased bg-ash text-night">
           <Main />
