@@ -10,3 +10,4 @@ export const getDictionary = async (locale: Locale = "ru"): Promise<SiteDictiona
   return loadDictionary();
 };
 
+

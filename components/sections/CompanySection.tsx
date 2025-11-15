@@ -39,3 +39,4 @@ export const CompanySection = ({ company }: CompanySectionProps) => (
 
 export default CompanySection;
 
+

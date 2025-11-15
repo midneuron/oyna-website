@@ -29,3 +29,4 @@ export const Footer = ({ footer }: FooterProps) => (
 
 export default Footer;
 
+

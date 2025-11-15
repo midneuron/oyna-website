@@ -47,6 +47,17 @@ Workflow Checklist — Oyna Website
     • deploy.yml - автоматический деплой на Vercel
   - Все workflows настроены на ветки main, develop и pull requests
   - Добавлена поддержка coverage reports через Codecov
+☑ Исправлена проблема с production build:
+  - Установлен @types/nodemailer для TypeScript типизации
+  - Production build теперь работает корректно (next build)
+  - Проверено успешное создание оптимизированной сборки
+☑ Настроена standalone сборка для деплоя:
+  - Добавлен output: "standalone" в next.config.ts
+  - Создан скрипт scripts/prepare-deploy.sh для подготовки сборки
+  - Команда npm run build:deploy создает готовую папку dist/ (~78 MB)
+  - Папка dist содержит: server.js, node_modules (минимальные), .next/, public/, start.sh
+  - Создана документация DEPLOYMENT_DIST.md с инструкциями по деплою
+  - Готово к деплою на любой хостинг с Node.js 20+ (Plesk, VPS, Dedicated)
 ☐ Проведено финальное тестирование и деплой.
 
 Заметки:
@@ -57,6 +68,13 @@ Workflow Checklist — Oyna Website
 - Hero секция теперь показывает видео вместо статичного изображения
 - Имя CTO обновлено на полное: Okubay Temudjin
 - Добавлен логотип Astana Hub (Astana-hub logo.avif) в Hero секцию
+
+Деплой:
+- Папка dist/ готова к деплою на хостинг (78 MB)
+- Standalone сборка включает: server.js, минимальные node_modules, .next/, public/
+- Протестирована локально - сервер работает корректно (HTTP 200 OK)
+- Документация: QUICK_DEPLOY.md, DEPLOYMENT_DIST.md, BUILD_FIX.md, DIST_READY.md
+- Команда для деплоя: source setup-dev.sh && npm run build:deploy
 
 Улучшения дизайна:
 - Все секции получили современный дизайн с glassmorphism эффектами
