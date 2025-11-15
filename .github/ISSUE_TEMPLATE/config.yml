@@ -1,0 +1,12 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 Документация
+    url: https://github.com/your-username/oyna-website/blob/main/README.md
+    about: Ознакомьтесь с документацией проекта
+  - name: 💬 Вопросы и обсуждения
+    url: https://github.com/your-username/oyna-website/discussions
+    about: Задайте вопрос или начните обсуждение
+  - name: 🚀 CI/CD Setup
+    url: https://github.com/your-username/oyna-website/blob/main/GITHUB_ACTIONS_SETUP.md
+    about: Инструкция по настройке CI/CD
+

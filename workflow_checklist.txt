@@ -28,8 +28,25 @@ Workflow Checklist — Oyna Website
   - Увеличены размеры элементов для удобного нажатия
   - Меню автоматически закрывается при клике на ссылку
   - Добавлена анимация для каждого элемента меню
+☑ Настроен деплой на Plesk хостинг (oynapp.kz).
+  - Создан workflow deploy-plesk.yml для автоматического деплоя
+  - Создан скрипт setup-server.sh для настройки сервера
+  - Создана полная документация по деплою на Plesk
+  - Создана инструкция по настройке DNS
+  - Добавлена информация о домене oynapp.kz
+  - Настроена автоматизация через GitHub Actions
 ☐ Настроен backend/интеграции и подключены аналитики.
-☐ Подготовлены CI/CD workflows и тесты.
+☑ Подготовлены CI/CD workflows и тесты.
+  - Настроен Jest + React Testing Library
+  - Создана конфигурация Prettier
+  - Добавлены тесты для компонентов (LanguageSwitcher, SectionHeading)
+  - Добавлены тесты для API endpoint (/api/contact)
+  - Созданы GitHub Actions workflows:
+    • lint.yml - проверка ESLint и Prettier
+    • test.yml - запуск тестов с coverage
+    • deploy.yml - автоматический деплой на Vercel
+  - Все workflows настроены на ветки main, develop и pull requests
+  - Добавлена поддержка coverage reports через Codecov
 ☐ Проведено финальное тестирование и деплой.
 
 Заметки:
