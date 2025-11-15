@@ -1,26 +1,45 @@
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-brand-teal: #0cbdbd;
+  --color-night: #0a0a0a;
+  --color-night-deep: #05090a;
+  --color-ash: #f5f8f8;
+  --color-slate: #6e6e6e;
+  --color-emerald: #aaf0e6;
+  --color-white: #ffffff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-teal: var(--color-brand-teal);
+  --color-night: var(--color-night);
+  --color-night-deep: var(--color-night-deep);
+  --color-ash: var(--color-ash);
+  --color-slate: var(--color-slate);
+  --font-sans: "Gilroy", "Manrope", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --shadow-soft: 0 30px 80px rgba(5, 9, 10, 0.08);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility bg-gradient-radial {
+  background-image: radial-gradient(circle at top, rgba(12, 189, 189, 0.25), transparent);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ash);
+  color: var(--color-night);
+  font-family: var(--font-sans);
+  margin: 0;
+}
+
+section {
+  scroll-margin-top: 120px;
 }
